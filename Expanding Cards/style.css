@@ -1,0 +1,50 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:90vw;
+}
+
+.panel {
+    margin: 10px;
+    padding: 20px;
+    height:90vh;
+    border-radius: 50px;
+    position:relative;
+    color: #fff;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    flex: 0.5;
+    transition: flex 0.7s ease-in;
+}
+    
+.panel h1 {
+    opacity: 0;
+    align-self: flex-end;
+    font-size: 23px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+.panel.active {
+    width:90vw;
+    flex:5;
+}
+
+.panel.active h1{
+    opacity: 1;
+}
+
+@media(max-width: 480px) {
+    .flex-container {
+        width:100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
